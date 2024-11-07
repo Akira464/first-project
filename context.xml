@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context antiResourceLocking="false" privileged="true" >
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="192\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+  
+
+    <Resource name="jdbc/project"
+              auth=""
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:8888/project"
+              username="root"
+              password="1qaz@WSX"
+	/>
+    
+</Context>

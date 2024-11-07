@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<title>訂單管理</title>
+<style>
+#orderTable {
+	margin: 10px;
+}
+
+#addTable {
+	margin: 10px;
+}
+
+h5 {
+	font-weight: bold;
+	font-size: 30px;
+}
+</style>
+</head>
+<body>
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/orderButtom.js"></script>
+	<script src="js/ordermanage.js"></script>
+	<div class="container-fluid">
+		<div class="row m-3">
+			<div class="col-2">
+				<button type="button" class="btn btn-primary" id="showOrder">顯示訂單</button>
+			</div>
+			<div class="col-8">
+				<form class="form-inline mr-sm-2">訂單查詢：<input type="text" name="customer_phone" placeholder="顧客手機號碼" />
+					<button type="button" class="btn btn-success" id="searchOrder">查詢訂單</button>
+					<button type="button" class="btn btn-info" id="modifyOrder" disabled>新增&修改</button>
+					<button type="button" class="btn btn-warning" id="deleteOrder" disabled>刪除</button>
+					<button type="button" class="btn btn-danger" id="checkOut" data-bs-toggle='modal' data-bs-target='#sub' disabled>結帳</button>
+				</form>
+			</div>
+			<div class="col-2">
+				<a href="backlogin.html"><button type="button" class="btn btn-primary">登出</button></a>
+			</div>
+		</div>
+	</div>
+	<br />
+	<br />
+	<div class="row">
+		<div class="col">
+			<div id="tableContainer">
+				<!-- 動態生成的表格將插入到这里 -->
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div id="orderAddTable">
+				<!-- 可以新增點餐的表格將插入到这里 -->
+			</div>
+		</div>
+	</div>
+	<!-- 彈出式視窗 -->
+	<div class="modal fade" id="sub">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header" id="subHead"></div>
+				<div class="modal-body" id="subBody">
+					<!-- 彈出式視窗的資訊將插入到这里 -->
+				</div>
+				<div class="modal-footer" id="subFoot">
+					<button type="button" class="btn btn-primary"
+						data-bs-dismiss="modal" onclick="subAdd()">確定送出</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

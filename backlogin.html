@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <link rel="stylesheet" href="css/backlogin.css" />
+    <title>後台登入</title>
+  </head>
+  <body>
+    <!-- 登入表單 -->
+    <div class="container">
+      <!-- 登入標題 -->
+      <h2>後台登入</h2>
+      <!-- 登入表單 -->
+      <form action="/Project/doLogin" method="post" id="login" name="login">
+        <!-- 使用者名稱輸入框 -->
+        <div class="form-group">
+          <input type="text" name="username" id="username" placeholder="帳號" required />
+        </div>
+        <!-- 密碼輸入框 -->
+        <div class="form-group">
+          <input type="password" name="password" id="password" placeholder="密碼" required />
+        </div>
+        <!-- 登入按鈕 -->
+        <div class="form-group">
+          <input type="submit" value="登入" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
