@@ -9,9 +9,9 @@
               auth=""
               type="javax.sql.DataSource"
               driverClassName="com.mysql.cj.jdbc.Driver"
-              url="jdbc:mysql://localhost:8888/project"
-              username="root"
-              password="1qaz@WSX"
+              url="YOUR_DATABASE_URL"
+              username="YOUR_USERNAME"
+              password="YOUR_PASSWORDX"
 	/>
     
 </Context>
